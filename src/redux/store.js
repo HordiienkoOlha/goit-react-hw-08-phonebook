@@ -26,18 +26,22 @@ const middleware = [
 const authPersistConfig = {
   key: 'auth',
   storage,
+  whitelist: ['token'],
 };
 
 export const store = configureStore({
   reducer: {
-    [contactApi.reducerPath]: contactApi.reducer,
-    filter,
-    auth: persistReducer(authPersistConfig, authReducer),
     // auth: authReducer,
+    auth: persistReducer(authPersistConfig, authReducer),
+    filter,
+    [contactApi.reducerPath]: contactApi.reducer,
   },
-  // ...getDefaultMiddleware(),
-  middleware: [...middleware, contactApi.middleware],
-  devTools: process.env.NODE_ENV !== 'development',
+  middleware: [
+    ...middleware,
+    // logger,
+    contactApi.middleware,
+  ],
+  devTools: process.env.NODE_ENV === 'development',
 });
 
 setupListeners(store.dispatch);

@@ -1,23 +1,23 @@
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import { ImAddressBook } from 'react-icons/im';
 
 import styles from './Navigation.module.css';
-import UserMenu from '../UserMenu/UserMenu';
+import UserMenu from 'components/UserMenu/UserMenu';
+import AuthNav from 'components/AuthNav/AuthNav';
+import { authSelectors } from '../../redux/auth';
 
 const Navigation = () => {
+  const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
   return (
     <>
       <Navbar bg="light" expand="lg">
         <Container>
           <Navbar.Brand className="ms-5">
-            <NavLink
-              // size="lg" type="text"
-              exact="true"
-              to="/"
-            >
+            <NavLink exact="true" to="/">
               <ImAddressBook />
             </NavLink>
           </Navbar.Brand>
@@ -25,7 +25,6 @@ const Navigation = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Navbar.Brand className="ms-5">
               <NavLink
-                // size="lg" type="text"
                 exact="true"
                 to="/"
                 className={({ isActive }) =>
@@ -37,7 +36,6 @@ const Navigation = () => {
             </Navbar.Brand>
             <Navbar.Brand>
               <NavLink
-                // size="lg" type="text"
                 to="/contacts"
                 className={({ isActive }) =>
                   isActive ? styles['active-link'] : styles.link
@@ -46,34 +44,15 @@ const Navigation = () => {
                 Contacts
               </NavLink>
             </Navbar.Brand>
-            <Navbar.Brand className="ms-5">
-              <NavLink
-                // size="lg" type="text"
-                exact="true"
-                to="/register"
-                className={({ isActive }) =>
-                  isActive ? styles['active-link'] : styles.link
-                }
-              >
-                Registration
-              </NavLink>
-            </Navbar.Brand>
-            <Navbar.Brand className="ms-5">
-              <NavLink
-                // size="lg" type="text"
-                exact="true"
-                to="/login"
-                className={({ isActive }) =>
-                  isActive ? styles['active-link'] : styles.link
-                }
-              >
-                Login
-              </NavLink>
-            </Navbar.Brand>
+
+            {isLoggedIn ? (
+              <Navbar.Brand>
+                <UserMenu />
+              </Navbar.Brand>
+            ) : (
+              <AuthNav />
+            )}
           </Navbar.Collapse>
-          <Navbar.Brand>
-            <UserMenu />
-          </Navbar.Brand>
         </Container>
       </Navbar>
     </>

@@ -6,13 +6,13 @@ import { lazy } from 'react';
 // import ContactList from './ContactList/ContactList';
 // import Filter from './Filter/Filter';
 
-const AppBar = lazy(() => import('./AppBar/AppBar'));
-const HomeView = lazy(() => import('../views/HomeView'));
-const ContactsView = lazy(() => import('../views/ContactsView'));
-const NotFoundView = lazy(() => import('../views/NotFoundView'));
+const AppBar = lazy(() => import('components/AppBar/AppBar'));
+const HomeView = lazy(() => import('views/HomeView'));
+const ContactsView = lazy(() => import('views/ContactsView'));
+const NotFoundView = lazy(() => import('views/NotFoundView'));
 // const UserMenu = lazy(() => import('./UserMenu/UserMenu'));
-const Register = lazy(() => import('./Register/Register'));
-const Login = lazy(() => import('./Login/Login'));
+const Register = lazy(() => import('components/Register/Register'));
+const Login = lazy(() => import('components/Login/Login'));
 
 export const App = () => {
   return (

@@ -1,4 +1,3 @@
-
 import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
 
@@ -9,11 +8,11 @@ import Navigation from 'components/Navigation/Navigation';
 export default function AppBar() {
   return (
     <>
-      <header >
+      <header>
         <Navigation />
       </header>
-      <Suspense fallback={<Spinner/>}>
-      <Outlet/>
+      <Suspense fallback={<Spinner />}>
+        <Outlet />
       </Suspense>
     </>
   );
