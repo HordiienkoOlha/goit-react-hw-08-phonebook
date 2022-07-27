@@ -1,8 +1,10 @@
+import Register from 'components/Register/Register';
+
 const RegisterView = () => {
   return (
     <>
       <h1>Page login</h1>
-      <Login />
+      <Register />
     </>
   );
 };

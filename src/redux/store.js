@@ -32,7 +32,7 @@ export const store = configureStore({
   reducer: {
     [contactApi.reducerPath]: contactApi.reducer,
     filter,
-    // auth: persistReducer(authPersistConfig, authReducer),
+    auth: persistReducer(authPersistConfig, authReducer),
     // auth: authReducer,
   },
   // ...getDefaultMiddleware(),

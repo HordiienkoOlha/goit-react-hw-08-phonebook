@@ -10,7 +10,12 @@ const initialState = {
 const authSlice = createSlice({
   name: 'auth',
   initialState,
-  extraReducers: {},
+  extraReducers: {
+    [authOperations.register.fulfilled](state, action) {
+      state.user = action.payload.user;
+      state.isLoggedIn = true;
+    },
+  },
 });
 
 export default authSlice.reducer;

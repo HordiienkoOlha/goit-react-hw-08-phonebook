@@ -41,7 +41,9 @@ const Register = () => {
         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
           <Form.Label>Name</Form.Label>
           <Form.Control
-            type="name"
+            type="text"
+            name="name"
+            value={name}
             placeholder="Your name"
             autoFocus
             onChange={handleChange}
@@ -51,8 +53,10 @@ const Register = () => {
           <Form.Label>Email address</Form.Label>
           <Form.Control
             type="email"
+            name="email"
+            value={email}
             placeholder="name@example.com"
-            autoFocus
+            // autoFocus
             onChange={handleChange}
           />
         </Form.Group>
@@ -60,6 +64,8 @@ const Register = () => {
           <Form.Label>Password</Form.Label>
           <Form.Control
             type="passsword"
+            name="password"
+            value={password}
             placeholder="Passsword"
             // autoFocus
             onChange={handleChange}
@@ -73,7 +79,7 @@ const Register = () => {
         <Form.Group className="text-center">
           <Button
             variant="outline-info"
-            type="submit"
+            type="button"
             className="ms-auto"
             onClick={() => navigate('/login')}
           >
