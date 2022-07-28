@@ -37,6 +37,8 @@ const Login = () => {
           <Form.Label>Email address</Form.Label>
           <Form.Control
             type="email"
+            name="email"
+            value={email}
             placeholder="Email"
             onChange={handleChange}
             // autoFocus
@@ -46,6 +48,8 @@ const Login = () => {
           <Form.Label>Password</Form.Label>
           <Form.Control
             type="passsword"
+            name="password"
+            value={password}
             placeholder="Passsword"
             // autoFocus
             onChange={handleChange}

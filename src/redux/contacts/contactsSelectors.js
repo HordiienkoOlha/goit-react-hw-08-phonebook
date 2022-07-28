@@ -1,6 +1,6 @@
 export const getFilter = state => state.filter;
 
-export const getContsctsFilter = (filter, contacts) => {
+export const getContactsFilter = (filter, contacts) => {
   const normalizeFilter = filter.toLowerCase();
   return contacts?.filter(
     ({ name, number }) =>
