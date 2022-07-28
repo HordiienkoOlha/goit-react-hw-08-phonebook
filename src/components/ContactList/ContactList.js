@@ -6,7 +6,6 @@ import Spinner from 'components/Spinner/Spinner';
 import { getFilter, getContactsFilter } from 'redux/contacts/contactsSelectors';
 import { useFetchContactsQuery } from 'redux/contacts/contactSlice';
 import ContactItem from '../ContactsItem/ContactsItem';
-// import { fetchContacts } from '../../redux/contacts/contactSlice';
 
 const ContactList = () => {
   const { data, isFetching } = useFetchContactsQuery();
@@ -14,7 +13,6 @@ const ContactList = () => {
   const filter = useSelector(getFilter);
   const contacts = getContactsFilter(filter, data);
 
-  // useEffect(() => dispatch(fetchContacts()), [dispatch]);
   return (
     <>
       <ListGroup

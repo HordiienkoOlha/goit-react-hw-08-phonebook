@@ -1,10 +1,11 @@
 // import { Container } from 'react-bootstrap';
 import { Route, Routes } from 'react-router-dom';
-import { lazy } from 'react';
-
+import { lazy, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 // import ContactForm from './ContactsForm/ContactForm';
 // import ContactList from './ContactList/ContactList';
 // import Filter from './Filter/Filter';
+import { authOperations } from './redux/auth';
 
 const AppBar = lazy(() => import('components/AppBar/AppBar'));
 const HomeView = lazy(() => import('views/HomeView'));
@@ -15,6 +16,11 @@ const Register = lazy(() => import('components/Register/Register'));
 const Login = lazy(() => import('components/Login/Login'));
 
 export const App = () => {
+    const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(authOperations.fetchCurrentUser());
+  }, [dispatch]);
   return (
     <>
       <Routes>

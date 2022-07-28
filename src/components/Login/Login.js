@@ -1,12 +1,14 @@
 import { Button, Card, Form } from 'react-bootstrap';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { authOperations } from '../../redux/auth';
 
 const Login = () => {
   const dispatch = useDispatch();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleChange = ({ target: { name, value } }) => {
     switch (name) {
@@ -24,6 +26,7 @@ const Login = () => {
     dispatch(authOperations.logIn({ email, password }));
     setEmail('');
     setPassword('');
+    navigate('/');
   };
 
   return (
@@ -56,12 +59,7 @@ const Login = () => {
           />
         </Form.Group>
         <Form.Group className="text-center">
-          <Button
-            variant="outline-info"
-            type="submit"
-            className="ms-auto"
-            //   onClick={handleClose}
-          >
+          <Button variant="outline-info" type="submit" className="ms-auto">
             Sign in
           </Button>
         </Form.Group>
