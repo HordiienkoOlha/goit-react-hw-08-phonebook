@@ -5,13 +5,14 @@ import { useDispatch } from 'react-redux';
 // import ContactForm from './ContactsForm/ContactForm';
 // import ContactList from './ContactList/ContactList';
 // import Filter from './Filter/Filter';
+import PrivateRoute from 'components/PrivateRoute';
+// import PublicRoute from 'components';
 import { authOperations } from './redux/auth';
+import AppBar from 'components/AppBar/AppBar';
 
-const AppBar = lazy(() => import('components/AppBar/AppBar'));
 const HomeView = lazy(() => import('views/HomeView'));
 const ContactsView = lazy(() => import('views/ContactsView'));
 const NotFoundView = lazy(() => import('views/NotFoundView'));
-// const UserMenu = lazy(() => import('./UserMenu/UserMenu'));
 const Register = lazy(() => import('components/Register/Register'));
 const Login = lazy(() => import('components/Login/Login'));
 
@@ -35,3 +36,16 @@ export const App = () => {
     </>
   );
 };
+
+//       <AppBar />
+//       <Routes>
+//         <Route path="/" exact element={<HomeView />}>
+//           <Route path="register" element={<Register />} />
+//           <Route path="login" element={<Login />} >
+// {/* <Route path="contacts" exact element={<PrivateRoute restricted><ContactsView /></PrivateRoute> */}
+          
+//           <Route path="contacts" exact element={<ContactsView />} />
+//           </Route>
+//         <Route path="*" element={<NotFoundView />} />
+//         </Route>
+//       </Routes>
