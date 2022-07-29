@@ -1,13 +1,13 @@
 // import { Container } from 'react-bootstrap';
 import { Route, Routes } from 'react-router-dom';
 import { lazy, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 // import ContactForm from './ContactsForm/ContactForm';
 // import ContactList from './ContactList/ContactList';
 // import Filter from './Filter/Filter';
 import PrivateRoute from 'components/PrivateRoute';
 // import PublicRoute from 'components';
-import { authOperations } from './redux/auth';
+import { authOperations, authSelectors } from './redux/auth';
 import AppBar from 'components/AppBar/AppBar';
 
 const HomeView = lazy(() => import('views/HomeView'));
@@ -18,25 +18,30 @@ const Login = lazy(() => import('components/Login/Login'));
 
 export const App = () => {
     const dispatch = useDispatch();
+   const isFetchingCurrentUser = useSelector(authSelectors.getIsFetchingCurrent);
 
   useEffect(() => {
     dispatch(authOperations.fetchCurrentUser());
   }, [dispatch]);
   return (
     <>
-      <Routes>
+{!isFetchingCurrentUser && (<Routes>
         <Route path="/" element={<AppBar />}>
           <Route index element={<HomeView />} />
           <Route path="register" element={<Register />} />
           <Route path="login" element={<Login />} />
-          <Route path="contacts" exact element={<ContactsView />} />
+          <Route path="contacts" exact element={<PrivateRoute><ContactsView /></PrivateRoute>} />
           <Route path="*" element={<NotFoundView />} />
         </Route>
-      </Routes>
+      </Routes>)}
     </>
   );
 };
 
+       //  {/* <Route path="contacts" ><PrivateRoute to={() => <Navigate to="contacts" }> <ContactsView /></PrivateRoute></Route> */}
+        
+          // {/* <PrivateRoute path="contacts"><ContactsView /></PrivateRoute> */}
+          
 //       <AppBar />
 //       <Routes>
 //         <Route path="/" exact element={<HomeView />}>

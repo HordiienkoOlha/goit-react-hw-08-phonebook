@@ -34,21 +34,23 @@ const Navigation = () => {
                 Home
               </NavLink>
             </Navbar.Brand>
-            <Navbar.Brand>
-              <NavLink
-                to="/contacts"
-                className={({ isActive }) =>
-                  isActive ? styles['active-link'] : styles.link
-                }
-              >
-                Contacts
-              </NavLink>
-            </Navbar.Brand>
 
             {isLoggedIn ? (
-              <Navbar.Brand>
-                <UserMenu />
-              </Navbar.Brand>
+              <>
+                <Navbar.Brand>
+                  <NavLink
+                    to="/contacts"
+                    className={({ isActive }) =>
+                      isActive ? styles['active-link'] : styles.link
+                    }
+                  >
+                    Contacts
+                  </NavLink>
+                </Navbar.Brand>{' '}
+                <Navbar.Brand>
+                  <UserMenu />
+                </Navbar.Brand>
+              </>
             ) : (
               <AuthNav />
             )}
