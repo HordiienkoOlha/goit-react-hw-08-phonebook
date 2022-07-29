@@ -1,12 +1,9 @@
-// import { Container } from 'react-bootstrap';
+
 import { Route, Routes } from 'react-router-dom';
 import { lazy, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-// import ContactForm from './ContactsForm/ContactForm';
-// import ContactList from './ContactList/ContactList';
-// import Filter from './Filter/Filter';
+
 import PrivateRoute from 'components/PrivateRoute';
-// import PublicRoute from 'components';
 import { authOperations, authSelectors } from './redux/auth';
 import AppBar from 'components/AppBar/AppBar';
 
