@@ -44,7 +44,7 @@ const Login = () => {
             value={email}
             placeholder="Email"
             onChange={handleChange}
-            // autoFocus
+            required
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
@@ -54,7 +54,7 @@ const Login = () => {
             name="password"
             value={password}
             placeholder="Passsword"
-            // autoFocus
+            required
             onChange={handleChange}
           />
         </Form.Group>

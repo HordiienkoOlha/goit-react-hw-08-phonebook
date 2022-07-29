@@ -29,6 +29,7 @@ const Register = () => {
     setName('');
     setEmail('');
     setPassword('');
+    //   navigate('/login')
   };
 
   return (
@@ -46,6 +47,7 @@ const Register = () => {
             value={name}
             placeholder="Your name"
             autoFocus
+            required
             onChange={handleChange}
           />
         </Form.Group>
@@ -56,7 +58,7 @@ const Register = () => {
             name="email"
             value={email}
             placeholder="name@example.com"
-            // autoFocus
+            required
             onChange={handleChange}
           />
         </Form.Group>
@@ -67,7 +69,7 @@ const Register = () => {
             name="password"
             value={password}
             placeholder="Passsword"
-            // autoFocus
+            required
             onChange={handleChange}
           />
         </Form.Group>
