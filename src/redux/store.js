@@ -31,14 +31,12 @@ const authPersistConfig = {
 
 export const store = configureStore({
   reducer: {
-    // auth: authReducer,
     auth: persistReducer(authPersistConfig, authReducer),
     filter,
     [contactApi.reducerPath]: contactApi.reducer,
   },
   middleware: [
     ...middleware,
-    // logger,
     contactApi.middleware,
   ],
   devTools: process.env.NODE_ENV === 'development',

@@ -1,25 +1,23 @@
-// import { useEffect } from 'react';
-import {
-  useSelector,
-  // useDispatch
-} from 'react-redux';
+import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import { ListGroup } from 'react-bootstrap';
 
 import Spinner from 'components/Spinner/Spinner';
 import { getFilter, getContactsFilter } from 'redux/contacts/contactsSelectors';
-import {
-  // contactApi,
-  useFetchContactsQuery,
-} from 'redux/contacts/contactSlice';
+import { useFetchContactsQuery } from 'redux/contacts/contactSlice';
 import ContactItem from '../ContactsItem/ContactsItem';
+import { authSelectors } from 'redux/auth';
 
 const ContactList = () => {
-  const { data, isFetching } = useFetchContactsQuery();
-  // const dispatch = useDispatch();
+  const { data, isFetching, refetch } = useFetchContactsQuery();
   const filter = useSelector(getFilter);
   const contacts = getContactsFilter(filter, data);
-
-  // useEffect(() => dispatch(contactApi.fetchContacts()), [dispatch]);
+  const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
+  useEffect(() => {
+    if (isLoggedIn) {
+      refetch();
+    }
+  }, [refetch, isLoggedIn]);
 
   return (
     <>

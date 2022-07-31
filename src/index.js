@@ -4,13 +4,12 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { PersistGate } from 'redux-persist/integration/react';
 
-import './index.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-// import { store } from './redux/store';
 import { store, persistor } from './redux/store';
 import { App } from 'App';
 import { Spinner } from 'react-bootstrap';
+
+import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -24,8 +23,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   </React.StrictMode>
 );
 
-// {name: "john Key", email: "johnkey@mail.com"}
-// name: "dsadffd", email: "dsadffd@mail.com"}
-// {"name":"cont ailend","email":"ailend@gmail.com"}"
-// {name: "rsdee", email: "evna@gmail.com"}
-// olhahord@gmail.com vasilevna@gmail.com

@@ -8,7 +8,6 @@ const AuthNav = () => {
     <>
       <Navbar.Brand className="ms-5">
         <NavLink
-          // size="lg" type="text"
           exact="true"
           to="/register"
           className={({ isActive }) =>
@@ -20,7 +19,6 @@ const AuthNav = () => {
       </Navbar.Brand>
       <Navbar.Brand className="ms-5">
         <NavLink
-          // size="lg" type="text"
           exact="true"
           to="/login"
           className={({ isActive }) =>

@@ -29,7 +29,6 @@ const Register = () => {
     setName('');
     setEmail('');
     setPassword('');
-    //   navigate('/login')
   };
 
   return (

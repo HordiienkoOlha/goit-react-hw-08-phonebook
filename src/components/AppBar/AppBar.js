@@ -3,7 +3,6 @@ import { Suspense } from 'react';
 
 import Spinner from '../Spinner/Spinner';
 import Navigation from 'components/Navigation/Navigation';
-// import styles from './Appbar.module.css';
 
 export default function AppBar() {
   return (
