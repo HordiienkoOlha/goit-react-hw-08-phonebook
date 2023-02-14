@@ -1,9 +1,7 @@
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
-import { ImAddressBook } from 'react-icons/im';
 
 import styles from './Navigation.module.css';
 import UserMenu from 'components/UserMenu/UserMenu';
@@ -15,14 +13,6 @@ const Navigation = () => {
   return (
     <>
       <Navbar bg="light" expand="lg" className="justify-content-center">
-        {/* <Container className="justify-content-center"> */}
-        {/* <Navbar.Brand className="ms-5">
-            <NavLink exact="true" to="/">
-              <ImAddressBook />
-            </NavLink>
-          </Navbar.Brand> */}
-        {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
-        {/* <Navbar.Collapse id="basic-navbar-nav"> */}
         <Navbar.Brand>
           <NavLink
             exact="true"
@@ -54,8 +44,6 @@ const Navigation = () => {
         ) : (
           <AuthNav />
         )}
-        {/* </Navbar.Collapse> */}
-        {/* </Container> */}
       </Navbar>
     </>
   );
