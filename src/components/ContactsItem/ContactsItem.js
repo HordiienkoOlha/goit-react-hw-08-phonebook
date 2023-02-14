@@ -12,7 +12,7 @@ const ContactItem = ({ name, number, id }) => {
           {name} : {number}
         </p>
         <Button
-          variant="outline-info"
+          variant="outline-primary"
           type="button"
           className="ms-auto"
           onClick={() => deleteContact(id)}

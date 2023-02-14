@@ -59,7 +59,7 @@ const Login = () => {
           />
         </Form.Group>
         <Form.Group className="text-center">
-          <Button variant="outline-info" type="submit" className="ms-auto">
+          <Button variant="outline-primary" type="submit" className="ms-auto">
             Sign in
           </Button>
         </Form.Group>

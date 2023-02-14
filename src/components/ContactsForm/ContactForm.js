@@ -82,7 +82,7 @@ export default function ContactForm() {
           {isLoading ? (
             <Spinner />
           ) : (
-            <Button size="lg" variant="outline-info" type="submit">
+            <Button size="lg" variant="outline-primary" type="submit">
               Add contact
             </Button>
           )}

@@ -13,7 +13,7 @@ const UserMenu = () => {
       <h2 className="align-middle important!">Welcome, {name}</h2>
       <Button
         className="ms-5"
-        variant="outline-info"
+        variant="outline-primary"
         type="button"
         onClick={() => {
           dispatch(authOperations.logOut());

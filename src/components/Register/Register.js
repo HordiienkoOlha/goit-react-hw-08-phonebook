@@ -73,13 +73,13 @@ const Register = () => {
           />
         </Form.Group>
         <Form.Group className="mb-3 text-center">
-          <Button variant="outline-info" type="submit" className="ms-auto">
+          <Button variant="outline-primary" type="submit" className="ms-auto">
             Register
           </Button>
         </Form.Group>
         <Form.Group className="text-center">
           <Button
-            variant="outline-info"
+            variant="outline-primary"
             type="button"
             className="ms-auto"
             onClick={() => navigate('/login')}

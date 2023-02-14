@@ -14,48 +14,48 @@ const Navigation = () => {
   const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
   return (
     <>
-      <Navbar bg="light" expand="lg">
-        <Container>
-          <Navbar.Brand className="ms-5">
+      <Navbar bg="light" expand="lg" className="justify-content-center">
+        {/* <Container className="justify-content-center"> */}
+        {/* <Navbar.Brand className="ms-5">
             <NavLink exact="true" to="/">
               <ImAddressBook />
             </NavLink>
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Navbar.Brand className="ms-5">
+          </Navbar.Brand> */}
+        {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
+        {/* <Navbar.Collapse id="basic-navbar-nav"> */}
+        <Navbar.Brand>
+          <NavLink
+            exact="true"
+            to="/"
+            className={({ isActive }) =>
+              isActive ? styles['active-link'] : styles.link
+            }
+          >
+            Home
+          </NavLink>
+        </Navbar.Brand>
+
+        {isLoggedIn ? (
+          <>
+            <Navbar.Brand>
               <NavLink
-                exact="true"
-                to="/"
+                to="/contacts"
                 className={({ isActive }) =>
                   isActive ? styles['active-link'] : styles.link
                 }
               >
-                Home
+                Contacts
               </NavLink>
+            </Navbar.Brand>{' '}
+            <Navbar.Brand>
+              <UserMenu />
             </Navbar.Brand>
-
-            {isLoggedIn ? (
-              <>
-                <Navbar.Brand>
-                  <NavLink
-                    to="/contacts"
-                    className={({ isActive }) =>
-                      isActive ? styles['active-link'] : styles.link
-                    }
-                  >
-                    Contacts
-                  </NavLink>
-                </Navbar.Brand>{' '}
-                <Navbar.Brand>
-                  <UserMenu />
-                </Navbar.Brand>
-              </>
-            ) : (
-              <AuthNav />
-            )}
-          </Navbar.Collapse>
-        </Container>
+          </>
+        ) : (
+          <AuthNav />
+        )}
+        {/* </Navbar.Collapse> */}
+        {/* </Container> */}
       </Navbar>
     </>
   );
