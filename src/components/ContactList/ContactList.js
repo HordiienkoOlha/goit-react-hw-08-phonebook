@@ -22,7 +22,7 @@ const ContactList = () => {
   return (
     <>
       <ListGroup
-        className="justify-content-center p-3 mx-auto mt-5"
+        className="justify-content-center p-1 mx-auto mt-2"
         style={{ width: '25rem' }}
       >
         {isFetching && <Spinner />}

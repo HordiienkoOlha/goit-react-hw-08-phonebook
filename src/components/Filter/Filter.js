@@ -7,9 +7,9 @@ const Filter = () => {
   const dispatch = useDispatch();
   return (
     <>
-      <h2 className="header text-center p-3 mt-2">Contacts</h2>
+      <h2 className="header text-center p-1">Contacts</h2>
       <Form
-        className="justify-content-center p-3 mx-auto mt-5"
+        className="justify-content-center p-1 mx-auto mt-1"
         style={{ width: '25rem' }}
       >
         <Form.Group className="mb-3" controlId="formBasicEmail">
