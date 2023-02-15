@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/goit-react-hw-08-phonebook/static/css/main.282e55c3.css",
-    "main.js": "/goit-react-hw-08-phonebook/static/js/main.cb6ad2f2.js",
+    "main.js": "/goit-react-hw-08-phonebook/static/js/main.e5d37760.js",
     "static/js/561.10a75f79.chunk.js": "/goit-react-hw-08-phonebook/static/js/561.10a75f79.chunk.js",
-    "static/js/648.46dc5798.chunk.js": "/goit-react-hw-08-phonebook/static/js/648.46dc5798.chunk.js",
+    "static/js/648.e3b4becc.chunk.js": "/goit-react-hw-08-phonebook/static/js/648.e3b4becc.chunk.js",
     "static/js/566.66cd1317.chunk.js": "/goit-react-hw-08-phonebook/static/js/566.66cd1317.chunk.js",
     "static/js/860.861a68ab.chunk.js": "/goit-react-hw-08-phonebook/static/js/860.861a68ab.chunk.js",
     "static/js/321.71e7d45f.chunk.js": "/goit-react-hw-08-phonebook/static/js/321.71e7d45f.chunk.js",
     "static/js/491.df350a83.chunk.js": "/goit-react-hw-08-phonebook/static/js/491.df350a83.chunk.js",
     "index.html": "/goit-react-hw-08-phonebook/index.html",
     "main.282e55c3.css.map": "/goit-react-hw-08-phonebook/static/css/main.282e55c3.css.map",
-    "main.cb6ad2f2.js.map": "/goit-react-hw-08-phonebook/static/js/main.cb6ad2f2.js.map",
+    "main.e5d37760.js.map": "/goit-react-hw-08-phonebook/static/js/main.e5d37760.js.map",
     "561.10a75f79.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/561.10a75f79.chunk.js.map",
-    "648.46dc5798.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/648.46dc5798.chunk.js.map",
+    "648.e3b4becc.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/648.e3b4becc.chunk.js.map",
     "566.66cd1317.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/566.66cd1317.chunk.js.map",
     "860.861a68ab.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/860.861a68ab.chunk.js.map",
     "321.71e7d45f.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/321.71e7d45f.chunk.js.map",
@@ -20,6 +20,6 @@
   },
   "entrypoints": [
     "static/css/main.282e55c3.css",
-    "static/js/main.cb6ad2f2.js"
+    "static/js/main.e5d37760.js"
   ]
 }
